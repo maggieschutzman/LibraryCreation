@@ -1,9 +1,21 @@
 ﻿using System;
+using StudentLibrary1;
+using UtilityLibrary;
 
-namespace Library {
+namespace StudentLibrary1 {
     class Program {
         static void Main(string[] args) {
-            Console.WriteLine("Hello World!");
+
+            var about = StudentLib.About;
+            UtilityLibrary.Console.Print(about);
+
+            var lib = new StudentLib();
+            var students = lib.ListStudents();
+            foreach (var student in students) {
+                System.Console.WriteLine($"{student.Firstname} {student.Lastname}");
+
+
+            }
         }
     }
 }
