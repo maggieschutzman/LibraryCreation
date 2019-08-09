@@ -12,10 +12,26 @@ namespace StudentLibrary1 {
             var lib = new StudentLib();
             var students = lib.ListStudents();
             foreach (var student in students) {
-                System.Console.WriteLine($"{student.Firstname} {student.Lastname}");
+                System.Console.WriteLine($"{student.Firstname} {student.Lastname} {student.Major.Description}");
 
-
+            //this should work
+            }
+            var s1 = lib.GetStudent(1);
+            if (s1 == null) {
+                System.Console.WriteLine("Student not found!");
+            }
+            else {
+                System.Console.WriteLine($"S1: {s1.Firstname} {s1.Lastname} {s1.Major.Description}");
+            }
+            //this should fail
+            var s444 = lib.GetStudent(444);
+            if (s444 == null) {
+                System.Console.WriteLine("Student not found!");
+            }
+            else {
+                System.Console.WriteLine($"S1: {s444.Firstname} {s444.Lastname} {s444.Major.Description}");
             }
         }
     }
-}
+ }
+

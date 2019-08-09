@@ -18,12 +18,13 @@ namespace StudentLibrary1
         public virtual DbSet<Courses> Courses { get; set; }
         public virtual DbSet<Majors> Majors { get; set; }
         public virtual DbSet<Schedule> Schedule { get; set; }
-        public virtual DbSet<Students> Students { get; set; }
+        public virtual DbSet<Student> Students { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
+                optionsBuilder.UseLazyLoadingProxies();
                 optionsBuilder.UseSqlServer("server=localhost\\sqlexpress;database=AppEfdb;trusted_connection=true;");
             }
         }
@@ -69,7 +70,7 @@ namespace StudentLibrary1
                     .HasForeignKey(d => d.MajorId);
             });
 
-            modelBuilder.Entity<Students>(entity =>
+            modelBuilder.Entity<Student>(entity =>
             {
                 entity.ToTable("students");
 

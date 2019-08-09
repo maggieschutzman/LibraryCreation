@@ -14,5 +14,7 @@ namespace StudentLibrary1
         public int StudentId { get; set; }
 
         public virtual Majors Major { get; set; }
+        public virtual Schedule Schedule { get; set; }
+        public virtual Student Student { get; set; }
     }
 }

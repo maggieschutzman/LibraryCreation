@@ -9,7 +9,7 @@ namespace StudentLibrary1
         {
             Courses = new HashSet<Courses>();
             Schedule = new HashSet<Schedule>();
-            Students = new HashSet<Students>();
+            Students = new HashSet<Student>();
         }
 
         public int Id { get; set; }
@@ -18,6 +18,6 @@ namespace StudentLibrary1
 
         public virtual ICollection<Courses> Courses { get; set; }
         public virtual ICollection<Schedule> Schedule { get; set; }
-        public virtual ICollection<Students> Students { get; set; }
+        public virtual ICollection<Student> Students { get; set; }
     }
 }

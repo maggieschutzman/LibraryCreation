@@ -10,5 +10,6 @@ namespace StudentLibrary1
         public int? MajorId { get; set; }
 
         public virtual Majors Major { get; set; }
+        public virtual Student Student { get; set; }
     }
 }
