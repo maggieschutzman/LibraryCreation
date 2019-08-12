@@ -5,6 +5,7 @@ namespace StudentLibrary1
 {
     public partial class Courses
     {
+
         public int Id { get; set; }
         public string Name { get; set; }
         public string Instructor { get; set; }
