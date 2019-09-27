@@ -7,23 +7,23 @@ namespace StudentLibrary1 {
         static void Main(string[] args) {
 
             //update 'imma' to 'zach' id = 1
-            //var lib = new StudentLib();
-            //var imma = lib.GetStudent(1);
-            //imma.Firstname = "Zach";
-            //var success = lib.UpdateStudent(imma);
+            var lib = new StudentLib();
+            var imma = lib.GetStudent(1);
+            imma.Firstname = "Zach";
+            var success = lib.UpdateStudent(imma);
 
-            //var ef1 = new Student {
-            //    Id = 0,
-            //    Firstname = "Elmer",
-            //    Lastname = "Fudd",
-            //    Sat = 500,
-            //    Gpa = 1.4,
-            //    IsFulltime = true,
-            //    MajorId = 1
-            //};
-            //var ok = lib.InsertStudent(ef1);
+            var ef1 = new Student {
+                Id = 0,
+                Firstname = "Elmer",
+                Lastname = "Fudd",
+                Sat = 500,
+                Gpa = 1.4,
+                IsFulltime = true,
+                MajorId = 1
+            };
+            var ok = lib.InsertStudent(ef1);
 
-            //System.Console.WriteLine((ok ? "Insert Successful!" : "Insert Failed!"));
+            System.Console.WriteLine((ok ? "Insert Successful!" : "Insert Failed!"));
 
 
 
